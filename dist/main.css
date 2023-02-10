@@ -420,7 +420,7 @@ video {
 }
 
 :root {
-  --stripes-hsla: 0, 0%, 10%;
+  --stripes-hsl: 0 0% 10%;
   --stripes-angle: -45deg;
   --stripes-opacity: 1;
   --stripes-size: 20px;
@@ -537,7 +537,7 @@ video {
 }
 
 .stripes::before {
-  --stripes-color: hsla(var(--stripes-hsla),var(--stripes-opacity));
+  --stripes-color: hsl(var(--stripes-hsl) / var(--stripes-opacity));
   content: "";
   position: absolute;
   z-index: -1;
@@ -550,8 +550,24 @@ video {
   animation: slide 1s infinite linear;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-24 {
@@ -568,6 +584,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -610,7 +630,7 @@ video {
 }
 
 .stripes-white {
-  --stripes-hsla: 0, 0%, 100%;
+  --stripes-hsl: 0 0% 100%;
 }
 
 .stripes-reverse {
@@ -629,6 +649,10 @@ video {
   --stripes-opacity: 0.5;
 }
 
+.stripes-opacity-60 {
+  --stripes-opacity: 0.6;
+}
+
 .stripes-size-lg {
   --stripes-size: 30px;
 }
@@ -643,4 +667,16 @@ video {
 
 .stripes-size-xl {
   --stripes-size: 40px;
+}
+
+.stripes-color-\[60\2c _60\%\2c _60\%\] {
+  --stripes-hsl: 60, 60%, 60%;
+}
+
+.stripes-color-\[60_60\%\2c _60\%\] {
+  --stripes-hsl: 60 60%, 60%;
+}
+
+.stripes-color-\[60_60\%_60\%\] {
+  --stripes-hsl: 60 60% 60%;
 }

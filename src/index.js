@@ -9,7 +9,7 @@ const stripes = plugin(function ({
 }) {
   addBase({
     ":root": {
-      "--stripes-hsla": "0, 0%, 10%",
+      "--stripes-hsl": "0 0% 10%",
       "--stripes-angle": "-45deg",
       "--stripes-opacity": "1",
       "--stripes-size": "20px",
@@ -27,7 +27,7 @@ const stripes = plugin(function ({
       isolation: "isolate",
     },
     ".stripes::before": {
-      "--stripes-color": "hsla(var(--stripes-hsla),var(--stripes-opacity))",
+      "--stripes-color": "hsl(var(--stripes-hsl) / var(--stripes-opacity))",
       content: '""',
       position: "absolute",
       zIndex: -1,
@@ -42,10 +42,10 @@ const stripes = plugin(function ({
     },
   });
 
-  // hsla(var(--stripes-hsla) var(--stripes-opacity)
+  // hsla(var(--stripes-hsl) var(--stripes-opacity)
 
   addUtilities({
-    ".stripes-white": { "--stripes-hsla": "0, 0%, 100%" },
+    ".stripes-white": { "--stripes-hsl": "0 0% 100%" },
     ".stripes-reverse": { "--stripes-angle": "45deg" },
   });
 
@@ -69,7 +69,7 @@ const stripes = plugin(function ({
   );
 
   matchUtilities({
-    "stripes-color": (value) => ({ "--stripes-hsla": value }),
+    "stripes-color": (value) => ({ "--stripes-hsl": value }),
   });
 });
 
