@@ -15,19 +15,17 @@ Add the plugin to you tailwind.config `require('tailwind-stripes-background')]`
 
 <!-- add an image -->
 
-![Normal Stripes](normal-stripes.png)
 
 ## Stripes Color
-`stripes-white` class will add the default white animated stripes
-`stripes-color-[10_20%_40%]` 
+```stripes-white``` class will add the default white animated stripes
+```stripes-color-[10_20%_40%]``` 
 
 ## Stripes Opacity
 
 `stripes-opacity` will add opacity with the already defined opacity values in tailwind and also accepts custom values like `stripes-opacity-[0.5532]`
 
-![Opacity Example](opacity-example.png)
 
-### Stripes Size
+## Stripes Size
 `stripes-size` has 4 values :
 
 ```
@@ -39,9 +37,7 @@ xl : 40px
 
 and it also accepts custom values like `stripes-size-[100px]` 
 
-### Stripes Direction
+## Stripes Direction
 
 `stripes-reverse` will reverse the stripes direction
-
-![Size Example](size-example.png)
 
