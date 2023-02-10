@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const tailwindStripes = require("./stripes-plugin.cjs");
+const tailwindStripes = require("./src");
 
 module.exports = {
   content: ["./src/**/*.{html,js}", './*.html'],
